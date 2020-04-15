@@ -1,0 +1,18 @@
+source = "https://github.com/matthewvandergrift/CopySource.git"
+destination = "https://github.com/matthewvandergrift/CopyDest.git"
+
+core.workflow(
+    mode = "ITERATIVE",
+    name = "default",
+    origin = git.origin(
+        url = source,
+        ref = "master",
+    ),
+    destination = git.destination(
+        url = destination,
+        fetch = "master",
+        push = "master",
+    ),
+    destination_files = glob(["**"]),
+    authoring = authoring.pass_thru("Matthew Vandergrift <matthew.vandergrift@live.com>"),
+)

@@ -33,7 +33,7 @@ RUN go get github.com/bazelbuild/buildtools/buildifier
 FROM openjdk:8-jre-slim
 ENV COPYBARA_CONFIG=copy.bara.sky \
     COPYBARA_SUBCOMMAND=migrate \
-    COPYBARA_OPTIONS='' \
+    COPYBARA_OPTIONS='--force --init-history --nosmart-prune' \
     COPYBARA_WORKFLOW=default \
     COPYBARA_SOURCEREF=''
 COPY --from=build /tmp/copybara/ /opt/copybara/
@@ -42,9 +42,11 @@ COPY .docker/entrypoint.sh /usr/local/bin/copybara
 
 RUN chmod +x /usr/local/bin/copybara
 
-# Install git for fun times
+# Install git
 RUN apt-get update \
     && apt-get install -y git \
     && apt-get clean
+
+RUN git config --global user.name "Matthew Vandergrift" && git config --global user.email "matthew.vandergrift@live.com"
 
 WORKDIR /usr/src/app
