@@ -83,9 +83,7 @@ you need:
 ```shell
 $ cd bazel-bin/java/com/google/copybara
 
-$ java -jar copybara_deploy.jar /Users/matthew.vandergrift.ibm.com/source/open/copybara/copy.bara.sky --force --init-history
-
-$ java -jar copybara_deploy.jar /Users/matthew.vandergrift.ibm.com/source/open/copybara/copy.bara.sky --force --init-history --nosmart-prune
+$ java -jar copybara_deploy.jar /Users/matthew.vandergrift.ibm.com/source/ibm/copybara/copy.bara.sky --force --init-history --nosmart-prune
 ```
 
 ## Using Docker to build and run Copybara

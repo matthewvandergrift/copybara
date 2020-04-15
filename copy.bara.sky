@@ -13,6 +13,7 @@ core.workflow(
         fetch = "master",
         push = "master",
     ),
+    origin_files=glob(["conductor/**"]),
     destination_files = glob(["**"]),
     authoring = authoring.pass_thru("Matthew Vandergrift <matthew.vandergrift@live.com>"),
 )
