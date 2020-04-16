@@ -1,5 +1,5 @@
-source = "https://github.ibm.com/CIO-SETS/operations.git"
-destination = "https://github.com/matthewvandergrift/CopyDest.git"
+source = "https://github.com/matthewvandergrift/CopySource.git"
+destination = "https://github.com/matthewvandergrift/CopyDestination.git"
 
 core.workflow(
     mode = "ITERATIVE",
