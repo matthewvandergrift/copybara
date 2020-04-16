@@ -1,5 +1,5 @@
-source = "https://github.com/matthewvandergrift/CopySource.git"
-destination = "https://github.com/matthewvandergrift/CopyDestination.git"
+source = "https://github.ibm.com/CIO-SETS/operations.git"
+destination = "https://github.ibm.com/conductor/conductor.git"
 
 core.workflow(
     mode = "ITERATIVE",
@@ -15,5 +15,5 @@ core.workflow(
     ),
     origin_files=glob(["conductor/**"]),
     destination_files = glob(["**"]),
-    authoring = authoring.pass_thru("Matthew Vandergrift <matthew.vandergrift@live.com>"),
+    authoring = authoring.pass_thru("Matthew-Vandergrift <matthew.vandergrift@ibm.com>"),
 )
